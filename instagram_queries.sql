@@ -121,6 +121,20 @@ SELECT (SELECT COUNT(*)
 
 */
 
+-- ---------------------------------------- --
+-- ---------------------------------------- --
+--    five most commonly used hashtags      --
+-- ---------------------------------------- --
+
+SELECT tag_name,
+       COUNT(*) AS times_used
+       FROM tags
+       INNER JOIN photo_tags
+       ON tags.id = photo_tags.tag_id
+       GROUP BY tags.id ORDER BY times_used DESC LIMIT 5;
+
+
+
 
 
 
