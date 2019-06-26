@@ -44,3 +44,5 @@ INSERT INTO reviewers (first_name, last_name) VALUES
     
 */
 
+SELECT * FROM series;
+SELECT * FROM reviewers;
