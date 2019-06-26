@@ -73,3 +73,5 @@ INSERT INTO reviews(series_id, reviewer_id, rating) VALUES
     (14,2,8.5),(14,3,8.9),(14,4,8.9);
     
     */
+    
+SELECT * FROM reviews;
