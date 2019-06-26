@@ -114,10 +114,12 @@ SHOW profile;
 -- ---------------------------------------- --
 -- how many time does the average user post --
 -- ---------------------------------------- --
-
+/*
 SELECT (SELECT COUNT(*) 
     FROM photos) / (SELECT COUNT(*) 
                 FROM users) AS average_posts;
+
+*/
 
 
 
