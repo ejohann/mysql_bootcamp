@@ -67,7 +67,48 @@ GROUP BY photo_id
 ORDER BY likes DESC LIMIT 10;
     */
 
+/*
+EXPLAIN SELECT
+  COUNT(created_at) AS registered_users,
+  DAYNAME(created_at) AS Day
+FROM users
+GROUP BY Day
+ORDER BY registered_users DESC;
 
+
+EXPLAIN SELECT
+  COUNT(*) AS registered_users,
+  DAYNAME(created_at) AS Day
+FROM users
+GROUP BY Day
+ORDER BY registered_users DESC;
+
+
+
+*/
+
+
+SET profiling=1;
+SELECT
+ COUNT(created_at) AS registered_users,
+  DAYNAME(created_at) AS Day
+FROM users
+GROUP BY Day
+ORDER BY registered_users DESC;
+
+
+SELECT
+  COUNT(*) AS registered_users,
+  DAYNAME(created_at) AS Day
+FROM users
+GROUP BY Day
+ORDER BY registered_users DESC;
+
+
+
+
+
+SHOW profile;
 
 
 
