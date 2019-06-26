@@ -39,13 +39,15 @@ ORDER BY registered_users DESC;
 -- -------------------------------------------
 -- find users who have never posted a photo --
 -- -------------------------------------------
+
+/*
 SELECT username
     FROM users
     LEFT JOIN photos
     on users.id = photos.user_id
     WHERE image_url IS NULL;
 
-
+*/
 
 
 
