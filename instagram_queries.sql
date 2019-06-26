@@ -136,7 +136,20 @@ SELECT tag_name,
 
 
 
-
+-- -------------------------------------------------- --
+-- -------------------------------------------------- --
+--    find users who have liked every single photo    --
+-- -------------------------------------------------- --
+SELECT username,
+       COUNT(likes.photo_id) AS total_likes 
+       FROM users
+       INNER JOIN likes
+       ON users.id = likes.user_id
+       INNER JOIN photos
+       ON likes.photo_id = photos.id
+       GROUP BY users.id 
+       HAVING total_likes = (SELECT COUNT(*) FROM photos);
+       ;
 
 
 
