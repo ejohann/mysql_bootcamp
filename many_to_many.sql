@@ -131,7 +131,7 @@ SELECT genre,
 */
 
 -- CHALLENGE SIX --
-
+/*
 SELECT first_name,
         last_name,
         COUNT(reviewer_id) AS 'COUNT',
@@ -147,3 +147,5 @@ SELECT first_name,
         ON reviewers.id = reviews.reviewer_id
         GROUP BY reviewers.id
         ORDER BY STATUS;
+       */ 
+        
