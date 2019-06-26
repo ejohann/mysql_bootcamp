@@ -114,6 +114,7 @@ SELECT title AS unreviewed_series
 */
 
 -- CHALLENGE FIVE --
+/*
 SELECT genre,
        AVG(rating) AS avg_rating
        FROM series
@@ -127,3 +128,4 @@ SELECT genre,
        INNER JOIN reviews
        ON series.id = reviews.series_id
        GROUP BY genre;
+*/
