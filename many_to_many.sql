@@ -129,3 +129,21 @@ SELECT genre,
        ON series.id = reviews.series_id
        GROUP BY genre;
 */
+
+-- CHALLENGE SIX --
+
+SELECT first_name,
+        last_name,
+        COUNT(reviewer_id) AS 'COUNT',
+        IFNULL(MIN(rating), 0) AS 'MIN',
+        IFNULL(MAX(rating), 0) AS 'MAX',
+        IFNULL(AVG(rating),0) AS 'AVG',
+        CASE
+            WHEN AVG(rating) IS NULL THEN 'INACTIVE'
+            ELSE 'ACTIVE'
+        END AS 'STATUS'
+        FROM reviewers
+        LEFT JOIN reviews
+        ON reviewers.id = reviews.reviewer_id
+        GROUP BY reviewers.last_name, reviewers.first_name
+        ORDER BY STATUS;
