@@ -103,3 +103,11 @@ SELECT first_name,
        INNER JOIN reviews
        ON reviewers.id = reviews.reviewer_id;
        */
+       
+-- CHALLENGE FOUR --
+
+SELECT title AS unreviewed_series
+      FROM series
+      LEFT JOIN reviews
+      ON series.id = reviews.series_id 
+      WHERE rating IS NULL;
