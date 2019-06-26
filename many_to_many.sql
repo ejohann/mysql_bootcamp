@@ -31,3 +31,4 @@ INSERT INTO series (title, released_year, genre) VALUES
     ('Pushing Daisies', 2007, 'Comedy'),
     ('Seinfeld', 1989, 'Comedy'),
     ('Stranger Things', 2016, 'Drama');
+    
