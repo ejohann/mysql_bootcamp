@@ -20,7 +20,6 @@ SELECT
     DAYNAME(created_at) AS 'Day'
     FROM users
     GROUP BY DAYNAME(created_at) ORDER BY registered_users DESC;
-*/
 
 SELECT
   COUNT(created_at) AS registered_users,
@@ -28,3 +27,5 @@ SELECT
 FROM users
 GROUP BY Day
 ORDER BY registered_users DESC;
+*/
+
