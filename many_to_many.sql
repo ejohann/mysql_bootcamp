@@ -75,3 +75,9 @@ INSERT INTO reviews(series_id, reviewer_id, rating) VALUES
     */
     
 -- SELECT * FROM reviews;
+
+SELECT title, 
+       rating
+       FROM series 
+        INNER JOIN reviews
+        ON series.id = reviews.series_id;
