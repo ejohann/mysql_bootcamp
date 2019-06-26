@@ -56,7 +56,7 @@ CREATE TABLE reviews(
     FOREIGN KEY(series_id) REFERENCES series(id),
     FOREIGN KEY(reviewer_id) REFERENCES reviewers(id)
 );
-*/
+
 
 INSERT INTO reviews(series_id, reviewer_id, rating) VALUES
     (1,1,8.0),(1,2,7.5),(1,3,8.5),(1,4,7.7),(1,5,8.9),
@@ -71,3 +71,5 @@ INSERT INTO reviews(series_id, reviewer_id, rating) VALUES
     (10,5,9.9),
     (13,3,8.0),(13,4,7.2),
     (14,2,8.5),(14,3,8.9),(14,4,8.9);
+    
+    */
