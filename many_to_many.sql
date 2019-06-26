@@ -145,5 +145,5 @@ SELECT first_name,
         FROM reviewers
         LEFT JOIN reviews
         ON reviewers.id = reviews.reviewer_id
-        GROUP BY reviewers.last_name, reviewers.first_name
+        GROUP BY reviewers.id
         ORDER BY STATUS;
