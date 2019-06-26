@@ -1,5 +1,7 @@
+-- -------------------------------------------
 -- 5 users who have been around the longest --
- 
+-- -------------------------------------------
+
 /*
 SELECT username,
         created_at
@@ -7,7 +9,11 @@ SELECT username,
     ORDER BY created_at ASC LIMIT 5;  
 */
 
+-- -----------------------------------------------
+-- -----------------------------------------------
 -- what days of the week do most users register --
+-- -----------------------------------------------
+
 /*
 SELECT 
     COUNT(DAYOFWEEK(created_at)) AS registered_users,
@@ -28,4 +34,28 @@ FROM users
 GROUP BY Day
 ORDER BY registered_users DESC;
 */
+
+-- -------------------------------------------
+-- -------------------------------------------
+-- find users who have never posted a photo --
+-- -------------------------------------------
+SELECT username,
+    image_url
+    FROM users
+    LEFT JOIN photos
+    on users.id = photos.user_id
+    WHERE image_url IS NULL;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
