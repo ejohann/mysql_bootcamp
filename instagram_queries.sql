@@ -53,7 +53,7 @@ SELECT username
 -- ------------------------
 -- photo with most likes --
 -- ------------------------
-
+/*
 SELECT
   username,
   image_url,
@@ -65,7 +65,7 @@ INNER JOIN likes
   ON photos.id = likes.photo_id
 GROUP BY photo_id
 ORDER BY likes DESC LIMIT 10;
-        ;
+    */
 
 
 
