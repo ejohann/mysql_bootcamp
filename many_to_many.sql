@@ -2,6 +2,7 @@
 
 -- USE tv_review_app;
 
+/*
 CREATE TABLE reviewers(
     id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(100),
@@ -40,3 +41,6 @@ INSERT INTO reviewers (first_name, last_name) VALUES
     ('Colt', 'Steele'),
     ('Pinkie', 'Petit'),
     ('Marlon', 'Crafford');
+    
+*/
+
