@@ -66,6 +66,10 @@ INNER JOIN likes
 GROUP BY photo_id
 ORDER BY likes DESC LIMIT 10;
     */
+    
+-- *************** --    
+-- TEST PERFORMANCE --
+-- *************** --
 
 /*
 EXPLAIN SELECT
@@ -84,10 +88,6 @@ GROUP BY Day
 ORDER BY registered_users DESC;
 
 
-
-*/
-
-
 SET profiling=1;
 SELECT
  COUNT(created_at) AS registered_users,
@@ -104,11 +104,22 @@ FROM users
 GROUP BY Day
 ORDER BY registered_users DESC;
 
-
-
-
-
 SHOW profile;
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
