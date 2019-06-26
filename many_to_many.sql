@@ -47,6 +47,7 @@ INSERT INTO reviewers (first_name, last_name) VALUES
 -- SELECT * FROM series;
 -- SELECT * FROM reviewers;
 
+/*
 CREATE TABLE reviews(
     id INT AUTO_INCREMENT PRIMARY KEY,
     rating DECIMAL(2,1),
@@ -55,3 +56,4 @@ CREATE TABLE reviews(
     FOREIGN KEY(series_id) REFERENCES series(id),
     FOREIGN KEY(reviewer_id) REFERENCES reviewers(id)
 );
+*/
