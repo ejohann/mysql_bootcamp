@@ -14,7 +14,7 @@ $$
 
 DELIMITER ;
 
-*/
+
 
 
 CREATE TABLE unfollows (
@@ -26,16 +26,21 @@ CREATE TABLE unfollows (
     PRIMARY KEY(follower_id, followee_id)
 );
 
+*/
 
-/*
+
+
 DELIMITER $$
 
-CREATE TRIGGER trigger_name
-     trigger_time trigger_event ON table_name FOR EACH ROW
+CREATE TRIGGER capture_unfollow
+     AFTER DELETE ON follows FOR EACH ROW
      BEGIN
+        INSERT INTO unfollows
+        SET 
+            follower_id = OLD.follower_id, 
+            followee_id = OLD.followee_id;
      END;
 $$
 
 DELIMITER ;
 
-*/
