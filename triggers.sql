@@ -1,3 +1,4 @@
+/*
 CREATE DATABASE trigger_demo;
 
 USE trigger_demo;
@@ -9,15 +10,7 @@ CREATE TABLE users(
 
 
 INSERT INTO users(username, age) VALUES ('bobby', 23), ('Robbert', 21), ('Jackie', 33), ('Susan', 36), ('Sally', 19);    
-
-/*
-
-CREATE TRIGGER trigger_name
-        trigger_time trigger_event ON table_name FOR EACH ROW
-        BEGIN
-        
-        END;
-        
+*/
 
 
 
@@ -35,5 +28,3 @@ CREATE TRIGGER must_be_adult
 $$
 
 DELIMITER;
-
-*/
