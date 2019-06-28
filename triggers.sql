@@ -8,6 +8,8 @@ CREATE TABLE users(
 );
 
 
+INSERT INTO users(username, age) VALUES ('bobby', 23), ('Robbert', 21), ('Jackie', 33), ('Susan', 36), ('Sally', 19);    
+
 /*
 
 CREATE TRIGGER trigger_name
