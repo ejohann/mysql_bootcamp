@@ -1,3 +1,4 @@
+/*
 DELIMITER $$
 
 CREATE TRIGGER prevent_self_follows
@@ -12,3 +13,29 @@ CREATE TRIGGER prevent_self_follows
 $$
 
 DELIMITER ;
+
+*/
+
+
+CREATE TABLE unfollows (
+    follower_id INTEGER NOT NULL,
+    followee_id INTEGER NOT NULL,
+    created_at TIMESTAMP DEFAULT NOW(),
+    FOREIGN KEY(follower_id) REFERENCES users(id),
+    FOREIGN KEY(followee_id) REFERENCES users(id),
+    PRIMARY KEY(follower_id, followee_id)
+);
+
+
+/*
+DELIMITER $$
+
+CREATE TRIGGER trigger_name
+     trigger_time trigger_event ON table_name FOR EACH ROW
+     BEGIN
+     END;
+$$
+
+DELIMITER ;
+
+*/
